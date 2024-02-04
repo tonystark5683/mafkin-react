@@ -1,0 +1,54 @@
+.m-wrapper{
+    position: relative;
+
+}
+
+.m-container{
+    display: flex;
+    justify-content: center;
+    padding: 2.6rem;
+    gap: 2rem;
+}
+
+.m-left{
+    background: var(--allbgcolor);
+    flex: 30%;
+    display: flex;
+    padding: 0 1.8rem;
+    padding-top: 3rem ;
+    flex-direction: column;
+    gap: 1.5rem;
+    border-radius: 25px;
+    
+}
+.m-left .tag{
+    color: whitesmoke;
+    text-align: center;
+}
+.m-left .text{
+    text-align: center;
+    font-size: .8rem;
+    line-height: 2rem;
+    color: whitesmoke;
+}
+.lottie{
+    height: 14rem;
+}
+.m-right{
+    flex: 70%;
+    
+}
+.map{
+    border-radius: 25px;
+    border-color: black ;
+    width: 100%;
+    height: 580px;
+}
+
+
+@media (max-width:1080px){
+.m-container{
+flex-direction: column;
+}
+}
+

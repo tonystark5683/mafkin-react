@@ -1,0 +1,150 @@
+.op-wrapper{
+    margin-bottom: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+
+}
+.op-container{
+    width: 80%;
+    margin: 0 auto ;
+    /* background: linear-gradient(135deg, #2D435A 0%, #293D55 30.69%, #263552 68.66%, #253557 100%); */
+    background: var(--allbgcolor);
+    padding: 2rem;
+    display: flex;
+    border-radius: 10px;
+
+}
+
+
+
+.op-left{
+
+    flex: 50%;
+    display: flex;
+    padding: 20px 0px;
+    flex-direction: column;
+    gap: 1.5rem;
+    
+}
+.op-left .tag{
+    color: whitesmoke;
+}
+.op-left .text{
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+    color: whitesmoke;
+}
+.op-right{
+
+    flex: 50%;
+}
+
+
+.op-right label{
+    margin: 0;
+    font-size: 1.2rem;
+    line-height: 1.9;
+    font-weight: 500;
+}
+
+.o-qa{
+    padding: 0px 20px;
+    background-color: #f3f3f3;
+    margin: 10px 0;
+    border: 0.5px solid #d8d8d8;
+    border-radius: 10px;
+}
+
+.op-right label{
+    position: relative;
+    display: block;
+    margin-bottom: 0px;
+    cursor: pointer;
+    padding: 10px 0px;
+    z-index: 1;
+    color: rgb(27,27,42);
+}
+.op-right input {
+    display: none;
+}
+
+.op-right label::after{
+    content: "";
+    position: absolute;
+    right: 15px;
+    top: 1rem;
+    width: 20px;
+    height: 15px;
+    background: url(./xmark-solid.svg) no-repeat 0 0;
+    transition: all 0.5s ease;
+    transform: rotate(45deg);
+}
+
+.op-right input:checked + label::after{
+    transform: rotate(90deg);
+}
+    
+
+.o-collapsible-text-1,
+.o-collapsible-text-2,
+.o-collapsible-text-3{
+    max-height: 1px;
+    overflow: hidden;
+    border-radius: 4px;
+    line-height: 1.4;
+    position: relative;
+    top: -20%;
+    opacity: 0.5;
+    transition: all 0.5s ease;
+}
+
+.op-right input#o-collapsible-head-1:checked ~ .o-collapsible-text-1,
+.op-right input#o-collapsible-head-2:checked ~ .o-collapsible-text-2,
+.op-right input#o-collapsible-head-3:checked ~ .o-collapsible-text-3{
+    max-height: 300px;
+    padding: 10px 0;
+    padding-bottom: 15px;
+    opacity: 1;
+    top: 0;
+}
+.op-right > p{
+    margin: 1rem 0;
+}
+
+
+@media (max-width:765px){
+    .op-container{
+        display: flex;
+        flex-direction: column;
+        margin-top: 8rem;
+    }
+    .op-left{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+
+
+@media (min-width:36rem){
+    .op-container{
+        margin: 5rem auto 0;
+    }
+}
+
+@media (min-width:60rem){
+    .op-container{
+        width: 90%;
+
+    }
+}
+
+@media(max-width:500px){
+    .service-right label::after{
+        right: -20px;
+    }
+}
